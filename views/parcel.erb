@@ -19,12 +19,16 @@
 
     <label for="ship_speed">Select your shipping speed.</label>
     <select id="ship_speed" name="ship_speed" class="form-control">
-      <option value="selected_speed"><%= @ship_speed %></option>
+      <option value="selected_speed"><%= @ship_speed.capitalize() %></option>
       <!-- <option value="air">Air</option>
       <option value="overnight">Overnight</option> -->
+    </select>
+    <label for="gift_wrap">Would you like gift wrap?</label>
+    <select id="gift_wrap" name="gift_wrap" class="form-control">
+      <option value="selected"><%= @gift_wrap %></option>
     </select>
   </div>
   <button type="submit" class="btn-success" id="go_back">Calculate Another</button>
 </form>
 <br>
-<h1><%= @cost %></h1>
+<h1>$<%= @cost %></h1>

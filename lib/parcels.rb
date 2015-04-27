@@ -45,6 +45,13 @@ class Parcels
     end
 
     @cost_to_ship = sprintf "%.2f", (@cost_to_ship.*(@cost_mult))
-     "$#{@cost_to_ship}"
+     return @cost_to_ship.to_f()
   end
+
+  define_method(:cost_to_wrap) do
+    @surf_area = 2.*(@length.*@width) + 2.*(@length.*@height) + 2.*(@height.*@width)
+    @cost_to_wrap = sprintf "%.2f", (0.005.*@surf_area)
+    return @cost_to_wrap.to_f()
+  end
+
 end
