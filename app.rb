@@ -7,7 +7,7 @@ get ('/') do
   erb(:index)
 end
 
-get('/parcels') do
+get ('/parcel') do
   @length = params.fetch('length').to_i()
   @width = params.fetch('width').to_i()
   @height = params.fetch('height').to_i()
@@ -17,4 +17,8 @@ get('/parcels') do
   test_parc = Parcels.new(@length, @width, @height, @weight)
   @cost = test_parc.cost_to_ship(@distance, @ship_speed)
   erb(:parcel)
+end
+
+get ('/index') do
+  erb(:index)
 end

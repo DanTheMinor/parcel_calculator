@@ -1,1 +1,30 @@
-<h1>The Cost to ship your parcel is: <%= @cost %></h1>
+<h1>Parcel Price Calculator</h1>
+<form action='/index'>
+  <div class='form-group'>
+    <!--Figure out a way to use the index as a results page -->
+    <label for="length">Enter the length of your parcel in cm</label>
+    <input value='<%= @length %>' id="length" name="length" class="form-control" type="number">
+
+    <label for="width">Enter the width of your parcel in cm</label>
+    <input value='<%= @width %>' id="width" name="width" class="form-control" type="number">
+
+    <label for="height">Enter the height of your parcel in cm</label>
+    <input value='<%= @height %>' id="height" name="height" class="form-control" type="number">
+
+    <label for="weight">Enter the weight of your parcel in grams</label>
+    <input value='<%= @weight %>' id="weight" name="weight" class="form-control" type="number">
+
+    <label for="distance">Enter the distance to ship your parcel in km</label>
+    <input value='<%= @distance %>' id="distance" name="distance" class="form-control" type="number">
+
+    <label for="ship_speed">Select your shipping speed.</label>
+    <select id="ship_speed" name="ship_speed" class="form-control">
+      <option value="selected_speed"><%= @ship_speed %></option>
+      <!-- <option value="air">Air</option>
+      <option value="overnight">Overnight</option> -->
+    </select>
+  </div>
+  <button type="submit" class="btn-success" id="go_back">Calculate Another</button>
+</form>
+<br>
+<h1><%= @cost %></h1>
