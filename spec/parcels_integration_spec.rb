@@ -5,7 +5,7 @@ set(:show_exceptions, false)
 require 'pry'
 
 describe('The parsels path', {:type => :feature}) do
-  it('take input through forms, send them through the cost_to_ship method, return the cost of shipping to the user.') do
+  it('take input through forms, return the cost of shipping to the user.') do
     visit('/')
     fill_in('length', :with => 5)
     fill_in('width', :with => 5)
