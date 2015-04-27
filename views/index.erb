@@ -1,0 +1,25 @@
+<h1>Parcel Price Calculator</h1>
+<form action='/parcels'>
+  <div class='form-group'>
+    <!--Figure out a way to use the index as a results page -->
+    <label for="length">Enter the length of your parcel in cm</label>
+    <input id="length" name="length" class="form-control" type="number">
+
+    <label for="width">Enter the width of your parcel in cm</label>
+    <input id="width" name="width" class="form-control" type="number">
+
+    <label for="height">Enter the height of your parcel in cm</label>
+    <input id="height" name="height" class="form-control" type="number">
+
+    <label for="weight">Enter the weight of your parcel in grams</label>
+    <input id="weight" name="weight" class="form-control" type="number">
+
+    <label for="distance">Enter the distance to ship your parcel in km</label>
+    <input id="distance" name="distance" class="form-control" type="number">
+
+    <label for="ship_speed">Select your shipping speed.</label>
+    <select id="ship_speed" name="ship_speed">
+      <option value="ground">Ground</option>
+      <option value="air">Air</option>
+      <option value="overnight">Overnight</option>
+    </select>
